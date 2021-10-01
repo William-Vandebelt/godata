@@ -95,6 +95,7 @@ type GoDataAnnotation struct {
 	XMLName   xml.Name `xml:"Annotation"`
 	Term      string   `xml:"Term,attr,omitempty"`
 	Qualifier string   `xml:"Qualifier,attr,omitempty"`
+	Value     string   `xml:"String"`
 }
 
 type GoDataComplexType struct {
