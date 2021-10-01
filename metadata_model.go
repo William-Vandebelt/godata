@@ -93,7 +93,7 @@ type GoDataAnnotations struct {
 
 type GoDataAnnotation struct {
 	XMLName   xml.Name `xml:"Annotation"`
-	Term      string   `xml:"Term,attr"`
+	Term      string   `xml:"Term,attr,omitempty"`
 	Qualifier string   `xml:"Qualifier,attr,omitempty"`
 }
 
@@ -165,6 +165,7 @@ type GoDataProperty struct {
 	Unicode      string   `xml:"Unicode,attr,omitempty"`
 	SRID         string   `xml:"SRID,attr,omitempty"`
 	DefaultValue string   `xml:"DefaultValue,attr,omitempty"`
+	Annotation   []*GoDataAnnotation
 }
 
 type GoDataNavigationProperty struct {
